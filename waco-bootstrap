@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Workstation as Code
+# Copyright Nicola Musatti 2020.
+
+# waco-bootstrap - Prepares a newly installed system for Waco provisioning
+
+echo 'Install Ansible'
+[[ $(grep CentOS /etc/os-release) != "" ]] && yum install -y epel-release
+yum install -y ansible git
+
+echo 'Create waco user'
+[[ $(getent passwd waco) = "" ]] && useradd -m waco
+echo 'waco ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/waco
+
+echo 'Create waco ssh key'
+sudo -u waco -i -n bash -c "ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<< y"
+cp  /home/waco/.ssh/id_rsa.pub /home/waco/.ssh/authorized_keys
+#echo '*' >> /home/waco/.ssh/config
+echo 'StrictHostKeyChecking no' > /home/waco/.ssh/config
+echo 'UserKnownHostsFile /dev/null' >> /home/waco/.ssh/config
+chown -R waco.waco /home/waco/.ssh
+chmod -R go-rwx /home/waco/.ssh
+
+echo 'Copy the waco installation'
+cp -r waco /home/waco
+chown -R waco.waco /home/waco/waco

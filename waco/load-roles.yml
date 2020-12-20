@@ -1,0 +1,21 @@
+---
+# Workstation as Code
+# Copyright Nicola Musatti 2020.
+
+# load-roles: install a role from a private git repository and its public dependencies from Galaxy.
+#             Dependencies are loaded from the role's Molecule default scenario's requirements file. 
+
+- name: "Install role {{ role }}"
+  # command: "ansible-galaxy install -f --roles-path roles git+https://{{ galaxyuser }}:{{ galaxypassword }}@{{ galaxyserver }}/{{ role }}.git"
+  command: "ansible-galaxy install -f --roles-path roles git+git@{{ galaxyserver }}/{{ role }}.git"
+
+- name: "Check if requirements.yml file exists"
+  file:
+    path: "roles/{{ role }}/molecule/default/requirements.yml"
+    state: file
+  ignore_errors: true
+  register: requirements
+
+- name: Install the public Ansible roles
+  command: "ansible-galaxy install -f -r roles/{{ role }}/molecule/default/requirements.yml --roles-path roles"
+  when: requirements is succeeded
