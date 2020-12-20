@@ -23,5 +23,5 @@ chown -R waco.waco /home/waco/.ssh
 chmod -R go-rwx /home/waco/.ssh
 
 echo 'Copy the waco installation'
-cp -r waco /home/waco
+cp -r /tmp/waco /home/waco
 chown -R waco.waco /home/waco/waco
