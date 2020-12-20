@@ -6,8 +6,7 @@
 #             Dependencies are loaded from the role's Molecule default scenario's requirements file. 
 
 - name: "Install role {{ role }}"
-  # command: "ansible-galaxy install -f --roles-path roles git+https://{{ galaxyuser }}:{{ galaxypassword }}@{{ galaxyserver }}/{{ role }}.git"
-  command: "ansible-galaxy install -f --roles-path roles git+https://{{ galaxyserver }}/{{ role }}.git"
+  command: "ansible-galaxy install -f --roles-path roles git+https://{{ galaxyuser }}:{{ galaxypassword }}@{{ galaxyserver }}/{{ role }}.git"
 
 - name: "Check if requirements.yml file exists"
   file:
