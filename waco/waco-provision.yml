@@ -5,8 +5,8 @@
 - name: Perform Waco provisioning
   hosts: all
   vars:
-    # galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
-    # galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
+    galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
+    galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
     galaxyserver: "{{ lookup('env', 'GALAXYSERVER') }}"
   vars_files:
     - settings/master.yml
