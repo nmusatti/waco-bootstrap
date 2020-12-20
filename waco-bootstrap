@@ -19,7 +19,6 @@ cp  /home/waco/.ssh/id_rsa.pub /home/waco/.ssh/authorized_keys
 #echo '*' >> /home/waco/.ssh/config
 echo 'StrictHostKeyChecking no' > /home/waco/.ssh/config
 echo 'UserKnownHostsFile /dev/null' >> /home/waco/.ssh/config
-ssh-keyscan -H github.com >> /home/waco/.ssh/known_hosts
 chown -R waco.waco /home/waco/.ssh
 chmod -R go-rwx /home/waco/.ssh
 
