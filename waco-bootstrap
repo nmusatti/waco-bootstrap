@@ -15,13 +15,15 @@ echo 'waco ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/waco
 
 echo 'Create waco ssh key'
 sudo -u waco -i -n bash -c "ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<< y"
-cp  /home/waco/.ssh/id_rsa.pub /home/waco/.ssh/authorized_keys
+cp  ~waco/.ssh/id_rsa.pub ~waco/.ssh/authorized_keys
 #echo '*' >> /home/waco/.ssh/config
-echo 'StrictHostKeyChecking no' > /home/waco/.ssh/config
-echo 'UserKnownHostsFile /dev/null' >> /home/waco/.ssh/config
-chown -R waco.waco /home/waco/.ssh
-chmod -R go-rwx /home/waco/.ssh
+echo 'StrictHostKeyChecking no' > ~waco/.ssh/config
+echo 'UserKnownHostsFile /dev/null' >> ~waco/.ssh/config
+chown -R waco.waco ~waco/.ssh
+chmod -R go-rwx ~waco/.ssh
 
+pushd $(dirname "$0")
 echo 'Copy the waco installation'
-cp -r /tmp/waco-bootstrap/waco /home/waco
-chown -R waco.waco /home/waco/waco
+cp -r waco ~waco
+chown -R waco.waco ~waco/waco
+popd
