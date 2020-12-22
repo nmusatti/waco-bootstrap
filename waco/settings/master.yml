@@ -4,101 +4,19 @@
 
 # System wide configurable settings
 
-waco_flatpak_apps:
-  - com.dropbox.Client
-  - com.skype.Client
-  - com.spotify.Client
-  - io.github.quodlibet.QuodLibet
-  - org.musicbrainz.Picard
-  - org.videolan.VLC
-waco_has_docker: true
-waco_has_grsync: true
+waco_flatpak_apps: []
+waco_has_docker: false
+waco_has_grsync: false
 waco_has_mate: false
-waco_has_packer: true
-waco_has_python: true
-waco_has_vagrant: true
-waco_has_virtualbox: true
-waco_has_vscode: true
-waco_packages:
-  - bzip2
-  - bzip2-devel
-  - darktable
-  - dkms
-  - filezilla
-  - firefox
-  - gcc
-  - gimp
-  - gimp-devel
-  - gimp-devel-tools
-  - gimp-libs
-  - git-all
-  - gnome-tweaks
-  - gparted
-  - gzip
-  - htop
-  - java-1.8.0-openjdk
-  - java-1.8.0-openjdk-devel
-  - java-1.8.0-openjdk-headless
-  - java-1.8.0-openjdk-javadoc
-  - java-1.8.0-openjdk-src
-  - java-11-openjdk
-  - java-11-openjdk-devel
-  - java-11-openjdk-headless
-  - java-11-openjdk-javadoc
-  - java-11-openjdk-jmods
-  - java-11-openjdk-src
-  - kernel-devel
-  - libreoffice-base
-  - libreoffice-calc
-  - libreoffice-draw
-  - libreoffice-impress
-  - libreoffice-math
-  - libreoffice-pdfimport
-  - libreoffice-writer
-  - meld
-  - openssh
-  - openssh-clients
-  - openssh-server
-  - openssh-askpass
-  - perl
-  - samba
-  - samba-client
-  - samba-common
-  - samba-common-tools
-  - samba-libs
-  - sane-backends
-  # - sane-backends-daemon
-  - sane-backends-devel
-  - sane-backends-doc
-  - sane-backends-drivers-cameras
-  - sane-backends-drivers-scanners
-  - sane-backends-libs
-  - sane-frontends
-  - seamonkey
-  - system-storage-manager
-  - thunderbird
-  - transmission
-  - unzip
-  - vim-enhanced
-  - vim-X11
-  - xsane
-  - xsane-common
-  - xsane-gimp
-  - zip
-waco_users:
-  - nick
-waco_user_settings:
-  nick:
-    has_rust: true
-    flatpak_apps: []
-wapy_source_versions:
-  - 3.9.0
-  - 3.8.6
-  - 3.7.9
-  - 3.6.12
-  - 2.7.18
-wapy_has_ansible: true
-wapy_has_mercurial: true
-wapy_has_sphinx: true
-#wavb_el_package: "6.1.14_140239_el{{ ansible_distribution_major_version }}-1"
-#wavb_package: "{{ ( waco_platform == 'Fedora' ) | ternary('', wavb_el_package) }}"
+waco_has_packer: false
+waco_has_python: false
+waco_has_vagrant: false
+waco_has_virtualbox: false
+waco_has_vscode: false
+waco_packages: []
+waco_users: []
+waco_user_settings: {}
+wapy_source_versions: []
+wapy_has_ansible: false
+wapy_has_mercurial: false
+wapy_has_sphinx: false
