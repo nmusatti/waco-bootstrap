@@ -9,6 +9,7 @@
     galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
     galaxymethod: "{{ lookup('env', 'GALAXYMETHOD') }}"
   vars_files:
+    - settings/galaxy.yml
     - settings/master.yml
 
   tasks:
