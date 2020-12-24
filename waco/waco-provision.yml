@@ -7,7 +7,7 @@
   vars:
     galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
     galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
-    galaxyserver: "{{ lookup('env', 'GALAXYSERVER') }}"
+    galaxymethod: "{{ lookup('env', 'GALAXYMETHOD') }}"
   vars_files:
     - settings/master.yml
 

@@ -1,0 +1,9 @@
+---
+# Workstation as Code
+# Copyright Nicola Musatti 2020.
+
+# Ansible Galaxy related settings
+
+galaxy_git_prefix: "{{ ( galaxymethod == 'https' ) | ternary('git+https://' + galaxyuser + ':' + galaxypassword, 'git') }}"
+galaxy_prefix: "{{ galaxy_git_prefix }}@github.com{{ ( galaxymethod == 'https' ) | ternary('/', ':') }}waco-org/"
+galaxy_postfix: ".git"

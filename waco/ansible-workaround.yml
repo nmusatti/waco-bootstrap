@@ -2,12 +2,14 @@
 # Workstation as Code
 # Copyright Nicola Musatti 2020.
 
+# Install Ansible 2.10 in a system virtualenv
+
 - name: Install Ansible 2.10 from PyPI
   hosts: all
   vars:
     galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
     galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
-    galaxyserver: "{{ lookup('env', 'GALAXYSERVER') }}"
+    galaxymethod: "{{ lookup('env', 'GALAXYMETHOD') }}"
 
   tasks:
     - name: Install the Waco Python role and its dependencies
