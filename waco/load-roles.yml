@@ -7,7 +7,7 @@
 
 - name: "Install role {{ role }}"
   # command: "ansible-galaxy install -f --roles-path roles git+https://{{ galaxyuser }}:{{ galaxypassword }}@{{ galaxyserver }}/{{ role }}.git"
-  command: "ansible-galaxy install -f --roles-path roles {{ galaxy_prefix }}{{ role }}{{ galaxy_postfix }}"
+  command: "ansible-galaxy install -f --roles-path roles git+https://{{ galaxyuser }}:{{ galaxypassword }}@github.com/waco-org/{{ role }}.git"
 
 - name: "Check if requirements.yml file exists"
   file:
