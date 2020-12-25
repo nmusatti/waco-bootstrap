@@ -1,7 +1,8 @@
 waco-bootstrap
 ==============
 
-A set of bash scripts and Ansible playbooks to install and run the `waco_master` role. 
+A set of bash scripts and Ansible playbooks to install and run the
+[waco_master](https://github.com/waco-org/waco-master.git) role. 
 
 - Download or clone this repository to the `/tmp` directory of your newly installed CentOS or 
   Fedora system;
