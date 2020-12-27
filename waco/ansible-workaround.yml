@@ -6,11 +6,11 @@
 
 - name: Install Ansible 2.10 from PyPI
   hosts: all
-  vars:
-    galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
-    galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
-  vars_files:
-    - settings/galaxy.yml
+  # vars:
+  #   galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
+  #   galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
+  # vars_files:
+  #   - settings/galaxy.yml
 
   tasks:
     - name: Install the Waco Python role and its dependencies

@@ -4,11 +4,11 @@
 
 - name: Perform Waco provisioning
   hosts: all
-  vars:
-    galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
-    galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
+  # vars:
+  #   galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
+  #   galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
   vars_files:
-    - settings/galaxy.yml
+    # - settings/galaxy.yml
     - settings/master.yml
 
   tasks:
