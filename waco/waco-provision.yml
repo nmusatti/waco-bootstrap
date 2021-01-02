@@ -1,14 +1,10 @@
 ---
 # Workstation as Code
-# Copyright Nicola Musatti 2020.
+# Copyright Nicola Musatti 2020 - 2021.
 
 - name: Perform Waco provisioning
   hosts: all
-  # vars:
-  #   galaxyuser: "{{ lookup('env', 'GALAXYUSER') }}"
-  #   galaxypassword: "{{ lookup('env', 'GALAXYPASSWORD') }}"
   vars_files:
-    # - settings/galaxy.yml
     - settings/master.yml
 
   tasks:
