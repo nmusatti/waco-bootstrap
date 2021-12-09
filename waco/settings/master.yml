@@ -1,13 +1,12 @@
 ---
 # Workstation as Code
-# Copyright Nicola Musatti 2020.
+# Copyright Nicola Musatti 2020 - 2021.
 
 # System wide configurable settings
 
 waco_flatpak_apps: []
 waco_has_docker: false
 waco_has_grsync: false
-waco_has_mate: false
 waco_has_packer: false
 waco_has_python: false
 waco_has_vagrant: false
