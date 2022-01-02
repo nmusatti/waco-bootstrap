@@ -7,7 +7,7 @@
 
 echo 'Install Ansible'
 [[ $(grep CentOS /etc/os-release) != "" ]] && yum install -y epel-release
-yum install -y ansible git
+yum install -y ansible git sudo
 
 echo 'Create waco user'
 [[ $(getent passwd waco) = "" ]] && useradd -m waco
