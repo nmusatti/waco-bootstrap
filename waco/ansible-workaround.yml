@@ -12,11 +12,11 @@
       include_tasks:
         file: load-roles.yml
       vars:
-        role: waco-python
+        role: waco_python
 
     - name: Install Ansible in a virtualenv 
       include_role:
-        name: waco-python
+        name: waco_org.waco_python
       vars:
         - wapy_source_versions: []
         - wapy_has_ansible: true
