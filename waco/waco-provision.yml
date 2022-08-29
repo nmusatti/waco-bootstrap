@@ -21,7 +21,7 @@
       vars:
         role: "{{ item.key }}"
         roles:
-          waco-python: "{{ waco_has_python }}"
+          waco_org.waco_python: "{{ waco_has_python }}"
       when: item.value
 
     - name: Provision the system

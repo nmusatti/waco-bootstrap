@@ -8,8 +8,8 @@
 echo 'Install Ansible'
 [[ $(grep CentOS /etc/os-release) != "" ]] && yum install -y epel-release
 if [[ $(grep Ubuntu /etc/os-release) != "" ]]; then
-    apt update
-    apt install ansible git sudo openssh-client
+    apt -y update
+    apt -y install ansible git sudo openssh-client
 else
     yum install -y ansible git sudo
 fi
