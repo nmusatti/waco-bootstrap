@@ -22,6 +22,7 @@ waco_has_virtualbox: true
 waco_has_vscode: true
 waco_packages:
   - brasero
+  - chromium
   - dkms
   - filezilla
   - gcc
