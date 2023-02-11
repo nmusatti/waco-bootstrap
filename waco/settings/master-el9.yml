@@ -22,12 +22,17 @@ waco_has_virtualbox: true
 waco_has_vscode: true
 waco_packages:
   - brasero
+  - bzip2
+  - bzip2-devel
   - chromium
   - dkms
   - filezilla
   - gcc
   - gimp
-  - git-gui
+  - gimp-devel
+  - gimp-devel-tools
+  - gimp-libs
+  - git-all
   - gnome-extensions-app
   - gnome-shell-extension-dash-to-dock
   - gnome-shell-extension-top-icons
@@ -35,6 +40,7 @@ waco_packages:
   - gnome-shell-extension-workspace-indicator
   - gnome-tweaks
   - gparted
+  - gzip
   - htop
   - ImageMagick
   - java-17-openjdk-devel
@@ -43,15 +49,46 @@ waco_packages:
   - java-11-openjdk-javadoc
   - java-1.8.0-openjdk-devel
   - java-1.8.0-openjdk-javadoc
+  - kernel-devel
   - kernel-headers
+  - libreoffice-base
+  - libreoffice-calc
+  - libreoffice-draw
+  - libreoffice-impress
+  - libreoffice-math
+  - libreoffice-pdfimport
+  - libreoffice-writer
+  - mediainfo
+  - mediainfo-gui
+  - mediainfo-qt
   - meld
+  - openssh
+  - openssh-clients
+  - openssh-server
+  - openssh-askpass
   - perl
   - samba
+  - samba-client
+  - samba-common
+  - samba-common-tools
+  - samba-libs
+  - sane-backends
+  - sane-backends-daemon
+  - sane-backends-devel
+  - sane-backends-doc
+  - sane-backends-drivers-cameras
+  - sane-backends-drivers-scanners
+  - sane-backends-libs
+  - sane-frontends
   - thunderbird
   - transmission
+  - unzip
   - vim-enhanced
   - vim-X11
   - xsane
+  - xsane-common
+  - xsane-gimp
+  - zip
 waco_users:
   - nick
 waco_user_settings:
