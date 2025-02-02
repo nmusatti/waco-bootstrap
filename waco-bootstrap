@@ -5,6 +5,9 @@
 
 # waco-bootstrap - Prepares a newly installed system for Waco provisioning
 
+# Needed by some Ubuntu releases
+export DEBIAN_FRONTEND=noninteractive
+
 echo 'Install Ansible'
 [[ $(grep CentOS /etc/os-release) != "" ]] && yum install -y epel-release
 if [[ $(grep Ubuntu /etc/os-release) != "" ]]; then
