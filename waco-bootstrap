@@ -1,12 +1,20 @@
 #!/bin/bash
 
 # Workstation as Code
-# Copyright Nicola Musatti 2020 - 2022.
+# Copyright Nicola Musatti 2020 - 2025.
 
 # waco-bootstrap - Prepares a newly installed system for Waco provisioning
 
+# Needed by some Ubuntu releases
+export DEBIAN_FRONTEND=noninteractive
+
+if [[ $(grep 'platform:el8' /etc/os-release) != "" ]]; then
+    echo 'Install Python 3.9 on EL 8'
+    yum install -y python39
+fi
+
 echo 'Install Ansible'
-[[ $(grep CentOS /etc/os-release) != "" ]] && yum install -y epel-release
+[[ $(grep 'platform:el' /etc/os-release) != "" ]] && yum install -y epel-release
 if [[ $(grep Ubuntu /etc/os-release) != "" ]]; then
     apt -y update
     apt -y install ansible git sudo openssh-client

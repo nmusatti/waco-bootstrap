@@ -15,6 +15,9 @@ A set of bash scripts and Ansible playbooks to install and run the
 If you plan to apply `waco-master` to several systems you might consider forking this repository
 and modify `master.yml` in your copy.
 
+Currently supported distros are Red Hat Enterprise 9 and derivatives, Centos Stream 10 and 9, and
+Ubuntu LTS 24.04 and 22.04.
+
 Known problems
 --------------
 
